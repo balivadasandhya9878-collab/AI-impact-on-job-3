@@ -22,7 +22,7 @@ else:
 
 # -------- Step 2: Basic Analysis --------
 print("\n--- Dataset Info ---")
-print(df.info())
+df.info()
 
 print("\n--- Top 5 Jobs by AI Impact ---")
 top_impact = df.sort_values(by='AI Impact Score (0-1)', ascending=False).head(5)
@@ -54,4 +54,5 @@ plt.show()
 # -------- Step 4: Save analysis results --------
 top10 = df.sort_values(by='AI Impact Score (0-1)', ascending=False).head(10)
 top10.to_excel('top10_ai_impact_jobs.xlsx', index=False)
+
 print("\nTop 10 AI impact jobs saved as 'top10_ai_impact_jobs.xlsx'")
